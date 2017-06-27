@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/map_fragment"
+    android:layout_height="match_parent">
+
+     <com.google.android.gms.maps.MapView
+         android:id="@+id/mapView"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent" />
+
+     <include layout="@layout/custom_marker_layout" />
+
+     <RelativeLayout
+         android:id="@+id/lm_relative_address"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:padding="@dimen/_20sdp">
+
+          <RelativeLayout
+              android:id="@+id/lm_relative_locationName"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:clickable="true"
+              android:visibility="gone"
+              android:padding="@dimen/_10sdp"
+              android:background="#FFFFFF">
+
+               <ImageView
+                   android:id="@+id/lm_location_icon"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_centerInParent="true"
+                   android:layout_alignParentLeft="true"
+                   />
+
+               <ImageView
+                   android:id="@+id/lm_location_close"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_centerInParent="true"
+                   android:layout_alignParentRight="true" />
+
+               <TextView
+                   android:id="@+id/lm_location_name"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:gravity="center"
+                   android:singleLine="true"
+                   android:paddingLeft="@dimen/_5sdp"
+                   android:layout_centerInParent="true"
+                   android:layout_toLeftOf="@id/lm_location_close"
+                   android:layout_toRightOf="@id/lm_location_icon"
+                   android:text="Somajiguda,Rajbavan Road" />
+
+          </RelativeLayout>
+
+
+
+     </RelativeLayout>
+
+
+
+
+</FrameLayout>
